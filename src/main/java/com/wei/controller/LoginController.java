@@ -31,6 +31,7 @@ public class LoginController {
             Claims.put("name", e.getName());
             Claims.put("username", e.getUsername());
             String jwt = JwtUtils.generateJwt(Claims);
+            log.info("登录成功，下发Token：{}", jwt);
             return Result.success(jwt);
         }
         //登录失败，返回错误信息
