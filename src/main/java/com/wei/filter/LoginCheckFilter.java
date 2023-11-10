@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
-@WebFilter(urlPatterns = "/*") //拦截路径
+//@WebFilter(urlPatterns = "/*") //拦截路径
 public class LoginCheckFilter implements Filter {
     //初始化方法，启动时执行，只执行一次
     @Override
