@@ -30,7 +30,7 @@ public class LoginCheckFilter implements Filter {
         System.out.println("拦截到了请求----------------------");
         //获取请求路径
         String url = req.getRequestURI();
-        log.info("请求路径：{}", url);
+        log.info("拦截到请求：{}", url);
         //请求包含login->放行
         if (url.contains("login")) {
             log.info("登录操作，放行------");
@@ -40,9 +40,9 @@ public class LoginCheckFilter implements Filter {
 
         //不是登录操作，获取token
         String jwt = req.getHeader("token");
-        log.info("toke：{}", jwt);
+        log.info("获取到jwt令牌：{}", jwt);
         //判断token是否为空
-        if (!(StringUtils.hasLength(jwt))) {
+        if (!StringUtils.hasLength(jwt)) {
             log.info("请求头token为空，返回未登录信息-----");
             Result error = Result.error("NOT_LOGIN");
             //对象转JSON
