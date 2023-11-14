@@ -9,7 +9,7 @@ import java.util.List;
 public interface DeptMapper {
     //查询所有部门数据
     @Select("select id, name, create_time, update_time from tlias.dept;")
-    public List<Dept> list();
+    List<Dept> list();
 
     //根据id删除部门
     @Delete("delete from tlias.dept where id = #{id}")

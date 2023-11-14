@@ -28,7 +28,7 @@ public class DeptController {
         return Result.success(deptList);
     }
 
-    //批量删除员工
+    //删除部门
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
         log.info("根据id删除部门：{}", id);
@@ -44,7 +44,7 @@ public class DeptController {
         return Result.success();
     }
 
-    //根据ID查询部门
+    //查询部门
     @GetMapping("/{id}")
     public Result select(@PathVariable Integer id) {
         log.info("根据id查询部门：{}", id);

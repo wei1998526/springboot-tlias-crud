@@ -1,6 +1,7 @@
 package com.wei.mapper;
 
 import com.wei.pojo.Emp;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -60,4 +61,8 @@ public interface EmpMapper {
      */
     @Select("select * from tlias.emp where username = #{username} and password = #{password};")
     Emp getByUserNameAndPassword(Emp emp);
+
+    //根据部门id删除员工
+    @Delete("delete from tlias.emp where dept_id = #{deptId}")
+    void deleteByDeptId(Integer deptId);
 }
