@@ -4,9 +4,13 @@
 # 基于编辑器的 HTTP 客户端请求
 /httpRequests/
 # Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
 /shelf
+compiler.xml
+/dataSources.local.xml
+/dataSources/
+encodings.xml
 jarRepositories.xml
 misc.xml
+uiDesigner.xml
 vcs.xml
+workspace.xml
