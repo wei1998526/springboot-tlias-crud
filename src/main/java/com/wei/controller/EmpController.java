@@ -1,5 +1,6 @@
 package com.wei.controller;
 
+import com.wei.anno.Log;
 import com.wei.pojo.Emp;
 import com.wei.pojo.PageBean;
 import com.wei.pojo.Result;
@@ -44,6 +45,7 @@ public class EmpController {
     }
 
     //批量删除
+    @Log
     @DeleteMapping("/{ids}")
     public Result deletes(@PathVariable List<Integer> ids) {
         log.info("批量删除，参数{}", ids);
@@ -52,6 +54,7 @@ public class EmpController {
     }
 
     //添加员工
+    @Log
     @PostMapping
     public Result add(@RequestBody Emp emp) {
         log.info("添加员工{}", emp);
@@ -68,6 +71,7 @@ public class EmpController {
     }
 
     //修改员工
+    @Log
     @PutMapping
     public Result update(@RequestBody Emp emp) {
         log.info("修改员工：{}", emp);

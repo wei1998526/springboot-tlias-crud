@@ -1,5 +1,6 @@
 package com.wei.controller;
 
+import com.wei.anno.Log;
 import com.wei.pojo.Dept;
 import com.wei.pojo.Result;
 import com.wei.service.DeptService;
@@ -29,6 +30,7 @@ public class DeptController {
     }
 
     //删除部门
+    @Log
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) throws Exception {
         log.info("根据id删除部门：{}", id);
@@ -37,6 +39,7 @@ public class DeptController {
     }
 
     //添加部门
+    @Log
     @PostMapping
     public Result add(@RequestBody Dept dept) {
         log.info("添加部门：{}", dept);
@@ -53,6 +56,7 @@ public class DeptController {
     }
 
     //修改部门
+    @Log
     @PutMapping
     public Result update(@RequestBody Dept dept) {
         log.info("修改部门：{}", dept);

@@ -7,3 +7,6 @@
 /dataSources/
 /dataSources.local.xml
 /shelf
+jarRepositories.xml
+misc.xml
+vcs.xml
